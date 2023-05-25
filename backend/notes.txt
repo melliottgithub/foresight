@@ -1,0 +1,20 @@
+dna/rna sequence:
+-Gdo-Gdo-Ado-Ado-Tdo-Gro-Gro-Cro-Uro-Uro-Uro-Ur
+
+elements are encoded: -Gdo or -Ums
+
+1st character - : means "-" no modifications
+2nd character - : represent the bases (example Gdo = G, Uro = U)
+3rd character - : sugar backbone with r for RNA, d for DNA, or
+another special character such as m for a modified RNA sugar. For -Gdo and -Ums, the
+sugars are d and m
+4th character - : phosphate linkage, which joins each combined base
+and the sugar unit of the sequence together. For -Gdo and -Ums, the linkages are o and s
+
+python -m venv .venv
+ . ./.venv/bin/activate
+
+ pip install -r requirements.txt
+
+ curl -X POST http://127.0.0.1:5000/analyze -H "Content-Type: application/json" \
+ -d '{"sequence": "-Gdo-Gdo-Ado-Ado-Tdo-Gro-Gro-Cro-Uro-Uro-Uro-Ur"}'
