@@ -1,0 +1,17 @@
+{
+  "name": "infraestructure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "add": "^2.0.6",
+    "aws-cdk": "^2.81.0",
+    "constructs": "^10.2.35",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.81.0"
+  }
+}

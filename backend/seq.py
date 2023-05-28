@@ -66,5 +66,19 @@ class Sequence:
             mass += weight
         return mass
 
+    def basesOnly(self):
+        strSeq = []
+        openBracket = False
+        for element in self.elements:
+            if element.sugar == "d" and not openBracket:
+                strSeq.append('[')
+                openBracket = True
+            elif element.sugar == "r" and openBracket:
+                strSeq.append(']')
+                openBracket = False
+
+            strSeq.append(element.base)
+        return "".join(strSeq)
+
     def __str__(self):
         return "".join([str(element) for element in self.elements])

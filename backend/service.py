@@ -6,7 +6,8 @@ def analyze(sequence):
         return {
             'linkageFreq': seq.linkageFreq(),
             'surgarFreq': seq.surgarFreq(),
-            'mass': seq.mass()
+            'mass': seq.mass(),
+            'bases': seq.basesOnly(),
         }
     except Exception as e:
         return {

@@ -10,3 +10,8 @@ seq = Sequence("-Uro-Uro-Gro-Ums-Um")
 print(seq.linkageFreq())
 print(seq.surgarFreq())
 print(seq.mass())
+
+
+# bases only
+seq = Sequence(strStr)
+print(seq.basesOnly(), seq.basesOnly() == '[GGAAT]GGCUUUU')

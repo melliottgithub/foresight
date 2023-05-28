@@ -1,7 +1,7 @@
 import React from "react";
 
 function Results(props) {
-  const { linkageFreq, surgarFreq, mass } = props.results;
+  const { linkageFreq, surgarFreq, mass, bases } = props.results;
   return (
     <div className="flex flex-column p-3">
       <div className="mb-2">
@@ -22,6 +22,9 @@ function Results(props) {
       </div>
       <div className="mb-2">
         <span className="text-900">Mass of Sequence</span>: {mass}
+      </div>
+      <div className="mb-2">
+        <span className="text-900">Shipping labels</span>: {bases}
       </div>
     </div>
   );

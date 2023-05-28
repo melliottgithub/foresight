@@ -9,9 +9,9 @@ def lambda_handler(event, context):
 
     response = None
 
-    action = params.get('action')
-    if (action == 'analyze'):
-        return analyze(params.get('sequence')
+    sequence = params.get('sequence')
+    if (sequence is not None):
+        return analyze(sequence)
     else:
         response = {
             'error': 'Invalid action'
@@ -19,5 +19,8 @@ def lambda_handler(event, context):
 
     return {
         'statusCode': 200,
-        'body': json.dumps(response)
+        'body': json.dumps(response),
+        'headers': {
+            'Access-Control-Allow-Origin': '*',
+        }
     }
